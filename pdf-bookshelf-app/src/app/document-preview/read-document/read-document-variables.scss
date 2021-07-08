@@ -1,0 +1,5 @@
+$read-document-header-height: 40px;
+$read-document-side-menu-height: calc(100vh - #{$read-document-header-height});
+$read-document-side-menu-width: 250px;
+$read-document-main-container-height: calc(100vh - #{$read-document-header-height});
+$read-document-main-container-width: calc(100vw - #{$read-document-side-menu-width});

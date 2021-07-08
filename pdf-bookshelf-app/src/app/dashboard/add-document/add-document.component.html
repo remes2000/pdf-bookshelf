@@ -1,0 +1,28 @@
+<div class="grid grid-cols-12 border border-gray-400 p-6">
+    <div class="col-span-3 flex justify-center">
+        <ngx-dropzone class="dropzone flex justify-center items-center"
+            [multiple]="false"
+            accept="application/pdf"
+            (change)="fileDropdownChange($event)">
+                <ngx-dropzone-label class="flex flex-col">
+                    <i class="fas fa-file-pdf text-5xl m-5"></i>
+                    Drop your book here!
+                </ngx-dropzone-label>
+                <ngx-dropzone-preview [removable]="true" *ngIf="selectedFile" (removed)="rejectFile()">
+                    <ngx-dropzone-label>{{selectedFile.name}}</ngx-dropzone-label>
+                </ngx-dropzone-preview>
+        </ngx-dropzone>
+    </div>
+    <div class="col-span-9">
+        <form [formGroup]="form" class="flex flex-col justify-between h-full" *ngIf="selectedFile">
+            <div>
+                <input type="text" formControlName="bookName" id="bookName" class="w-1/2"/>
+                <label for="bookName" class="block">Book name</label>
+            </div>
+            <div>
+                <button class="button button-outline-primary mr-3" (click)="showDocument()">Show</button>
+                <button class="button button-primary" (click)="saveDocument()">Save</button>
+            </div>
+        </form>
+    </div>
+</div>

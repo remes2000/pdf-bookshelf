@@ -1,0 +1,11 @@
+<app-read-document-header
+    [currentPage]="currentPage"
+    [numberOfPages]="numberOfPages"
+    (pageSelected)="scrollToPage($event)"
+></app-read-document-header>
+<div class="flex">
+    <app-read-document-side-menu></app-read-document-side-menu>
+    <div #pagesContainerWrapper class="read-document-main-container" (scroll)="onPagesContainerScroll($event)">
+        <ng-container #pagesContainer></ng-container>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+@import './read-document-variables.scss';
+
+.read-document-main-container {
+    width: $read-document-main-container-width;
+    height: $read-document-main-container-height;
+    @apply bg-gray-100 overflow-y-auto flex flex-col items-center ;
+}

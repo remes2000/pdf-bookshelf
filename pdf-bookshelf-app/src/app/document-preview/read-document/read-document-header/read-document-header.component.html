@@ -1,0 +1,19 @@
+<nav class="read-document-header">
+   <div class="logo-container">
+      <h1 class="text-xl">
+         <a href="/">
+             <span class="font-bold text-gray-500">Pdf</span>
+             <span class="pl-2 text-gray-400">Bookshelf</span>
+         </a>
+     </h1>
+   </div>
+   <div class="flex justify-center items-center w-full">
+      <input 
+         type="text" 
+         class="mr-2"
+         [(ngModel)]="pageSelectorValue" 
+         [ngModelOptions]="{updateOn: 'blur'}" 
+         (ngModelChange)="setCurrentPage($event)" 
+      /> / {{ numberOfPages }}
+   </div>
+</nav>

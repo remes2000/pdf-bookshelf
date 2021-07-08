@@ -1,0 +1,7 @@
+@import '../read-document-variables';
+
+.read-document-side-menu {
+    width: $read-document-side-menu-width;
+    height: $read-document-side-menu-height;
+    @apply bg-gray-500;
+}

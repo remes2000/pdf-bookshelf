@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GlobalWorkerOptions, version as pdfjsVersion } from 'pdfjs-dist';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pdf-bookshelf-app';
+  constructor() {
+    const pdfWorkerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsVersion}/pdf.worker.min.js`;
+    GlobalWorkerOptions.workerSrc = pdfWorkerSrc;
+  }
 }

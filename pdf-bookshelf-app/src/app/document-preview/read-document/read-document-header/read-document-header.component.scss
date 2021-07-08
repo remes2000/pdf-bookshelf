@@ -1,0 +1,10 @@
+@import '../read-document-variables.scss';
+.read-document-header {
+    height: $read-document-header-height;
+    @apply w-full bg-gray-50 flex justify-start items-center;
+}
+
+.logo-container {
+    width: $read-document-side-menu-width;
+    @apply box-border p-3;
+}

@@ -1,0 +1,16 @@
+<div class="page-container" [ngStyle]="{'width': pageWidth + 'px', 'height': pageHeight + 'px'}">
+    <div [ngClass]="{'hidden': isRendering || !isRendered}">
+        <div>
+            <canvas #canvas></canvas>
+        </div>
+        <div #textLayer class="text-layer"></div>
+    </div>
+
+    <div *ngIf="!isRendered" class="w-full h-full p-3 overflow-hidden">
+        <div class="placeholder" *ngFor="let item of [].constructor(numberOfPlaceholders)"></div>
+    </div>
+
+    <div *ngIf="isRendering" class="rendering-mask">
+        <i class="fas fa-circle-notch fa-spin text-4xl bg-color-gray-500"></i>
+    </div>
+</div>

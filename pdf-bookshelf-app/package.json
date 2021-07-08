@@ -19,8 +19,13 @@
     "@angular/platform-browser": "~11.2.6",
     "@angular/platform-browser-dynamic": "~11.2.6",
     "@angular/router": "~11.2.6",
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/typography": "^0.4.0",
+    "@types/pdfjs-dist": "^2.7.0",
+    "mocka-placeholder": "^1.0.2",
+    "ngx-dropzone": "^3.0.0",
+    "pdfjs-dist": "^2.6.347",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
